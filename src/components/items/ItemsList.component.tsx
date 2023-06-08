@@ -1,6 +1,7 @@
 import React from 'react';
+import { ItemInterface } from '../../models/items/item.interface';
 
-export const ItemsListComponent: React.FC<{items: any[]}> = (props) => {
+export const ItemsListComponent: React.FC<{items: ItemInterface[]}> = (props) => {
 
   return (
     <div>
