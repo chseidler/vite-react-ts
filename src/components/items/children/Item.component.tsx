@@ -4,7 +4,7 @@ import { ItemInterface } from '../../../models/items/item.interface';
 type Props = {
     testid: string;
     model: ItemInterface;
-    onItemSlect: (item: ItemInterface) => void;
+    onItemSelect: (item: ItemInterface) => void;
 }
 
 export const ItemComponent: React.FC<Props> = (props) => {
@@ -19,7 +19,7 @@ export const ItemComponent: React.FC<Props> = (props) => {
   };
 
   const handleItemClick = (item: ItemInterface) => {
-    props.onItemSlect(item);
+    props.onItemSelect(item);
   }; 
 
   return (
