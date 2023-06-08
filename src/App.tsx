@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ItemsListComponent } from './components/items/ItemsList.component';
 import { ItemInterface } from './models/items/item.interface';
+import './App.css';
 
 function App() {
   const [items, setItems] = useState<ItemInterface[]>([{
