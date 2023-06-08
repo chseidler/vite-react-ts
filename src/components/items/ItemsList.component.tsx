@@ -1,5 +1,6 @@
 import React from 'react';
 import { ItemInterface } from '../../models/items/item.interface';
+import { ItemComponent } from './children/Item.component';
 
 type Props = {
   items: ItemInterface[],
@@ -19,10 +20,12 @@ export const ItemsListComponent: React.FC<Props> = (props) => {
         {
           props.items.map((item, index) => {
             return (
-              <li key={index}
-                onClick={() => handleItemClick(item)}>
-                {item.name} [{ String(item.selected) }]
-              </li> 
+              <ItemComponent
+                testid={`item-${item.id}`}
+                key={index}
+                model={item}
+                onItemSelect={() => handleItemClick(item)}
+              />
             );
           })
         }
