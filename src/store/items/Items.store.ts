@@ -3,6 +3,7 @@ import { itemsStoreSlice } from './Items.slice';
 import { ItemInterface } from '../../models/items/item.interface';
 import { useSelector } from 'react-redux';
 import { RootStateInterface } from '../root/Root.store';
+import { apiClient } from '../../api-client';
 
 /**
  * @name useItemsActions
@@ -15,27 +16,8 @@ export function useItemsActions(commit: Dispatch<any>) {
     loadItems: async () => {
       commit(mutations.setLoading(true));
 
-      const mockItems: ItemInterface[] = [
-        {
-          id: 1,
-          name: 'Item 1',
-          selected: false
-        },
-        {
-          id: 2,
-          name: 'Item 2',
-          selected: false
-        },
-        {
-          id: 3,
-          name: 'Item 3',
-          selected: false
-        },
-      ];
-
-      setTimeout(() => {
-        commit(mutations.setItems(mockItems));
-      }, 1000);
+      const data = await apiClient.items.fetchItems();
+      commit(mutations.setItems(data));
     },
 
     toggleItemSelected: async (item: ItemInterface) => {
