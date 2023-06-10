@@ -2,7 +2,7 @@ import { Dispatch } from 'react';
 import { itemsStoreSlice } from './Items.slice';
 import { ItemInterface } from '../../models/items/item.interface';
 import { useSelector } from 'react-redux';
-import { RootStateInterface } from '../root/models';
+import { RootStateInterface } from '../root/Root.store';
 
 /**
  * @name useItemsActions
