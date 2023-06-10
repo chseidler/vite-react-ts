@@ -1,1 +1,1 @@
-export * from './RootStore.interface';
+export * from './RootState.interface';
