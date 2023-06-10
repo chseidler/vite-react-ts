@@ -17,7 +17,7 @@ function ItemsViews() {
 
   return (
     <div>
-      <ItemsListComponent items={items} onItemSelect={onItemSelect} />
+      <ItemsListComponent items={items} onItemSelect={onItemSelect} loading={loading} />
     </div>
   );
 }
