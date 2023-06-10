@@ -1,7 +1,11 @@
 import { useState } from 'react';
+
+import { Provider } from 'react-redux';
+import './App.css';
+
 import { ItemsListComponent } from './components/items/ItemsList.component';
 import { ItemInterface } from './models/items/item.interface';
-import './App.css';
+import { rootStore } from './store';
 
 function App() {
   const [items, setItems] = useState<ItemInterface[]>([{
@@ -28,9 +32,11 @@ function App() {
   };
 
   return (
-    <div>
-      <ItemsListComponent items={items} onItemSelect={onItemSelect}/>
-    </div>
+    <Provider store={rootStore}>
+      <div className="App">
+        <ItemsListComponent items={items} onItemSelect={onItemSelect}/>
+      </div>
+    </Provider>
   );
 }
 
