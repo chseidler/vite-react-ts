@@ -11,7 +11,7 @@ export const HttpContentTypes = Object.freeze({
   formUrlEncoded: 'application/x-www-form-urlencoded;charset=UTF-8'
 });
 
-export const HttpRequestsMethods = Object.freeze({
+export const HttpRequestMethods = Object.freeze({
   get: 'GET',
   post: 'POST',
   put: 'PUT',
