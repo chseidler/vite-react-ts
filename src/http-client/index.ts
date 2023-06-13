@@ -4,7 +4,7 @@ export * from './models';
 
 let _httpClient: HttpClientInterface | undefined = undefined;
 
-export const useHttpClient = () => {
+export const httpClientFactory = () => {
   if (!_httpClient) {
     const clientType = 'fetch';
 
