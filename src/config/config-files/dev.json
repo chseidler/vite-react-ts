@@ -7,7 +7,7 @@
     "clientType": "fetch"
   },
   "apiClient": {
-    "type": "mock"
+    "type": "dev"
   },
   "items": {
     "apiClientOptions": {
