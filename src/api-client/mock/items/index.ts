@@ -1,12 +1,6 @@
-import { ItemsApiClientInterface, ItemsApiClientModel, ItemsApiClientOptions } from '../../models/items';
+import { config } from '../../../config';
+import { ItemsApiClientInterface, ItemsApiClientModel } from '../../models/items';
 
-const options: ItemsApiClientOptions = {
-  endpoints: {
-    fetchItems: '/static/mock-data/items/items.json'
-  },
-  mockDelay: 1000,
-};
-
-const itemsApiClient: ItemsApiClientInterface = new ItemsApiClientModel(options);
+const itemsApiClient: ItemsApiClientInterface = new ItemsApiClientModel(config.items.apiClientOptions);
 
 export { itemsApiClient };

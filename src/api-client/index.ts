@@ -1,14 +1,10 @@
+import { config } from '../config';
 import { apiLiveClient } from './live';
 import { apiMockClient } from './mock';
 import { ApiClientInterface } from './models/ApiClient.interface';
 
-let env = 'mock';
-if (import.meta.env?.VITE_API_CLIENT) {
-  env = import.meta.env.VITE_API_CLIENT.trim();
-}
-
 let apiClient: ApiClientInterface;
-if (env === 'live') {
+if (config.apiClient.type === 'live') {
   apiClient = apiLiveClient;
 } else {
   apiClient = apiMockClient;
