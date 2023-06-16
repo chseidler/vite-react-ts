@@ -1,0 +1,13 @@
+{
+    "local.selector.en-US": "English",
+    "local.selector.it-IT": "Italian",
+    "local.selector.fr-FR": "French",
+    "local.selector.es-ES": "Spanish",
+
+    "home.welcome": "Welcome: this message is localized in English",
+
+    "navigation.home": "Home",
+    "navigation.about": "About",
+
+    "items.list.header": "My Items"
+}

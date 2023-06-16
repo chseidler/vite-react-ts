@@ -1,0 +1,13 @@
+{
+    "local.selector.en-US": "Anglais",
+    "local.selector.it-IT": "Italien",
+    "local.selector.fr-FR": "Français",
+    "local.selector.es-ES": "Espagnol",
+
+    "home.welcome": "Bienvenue: this message is localized in French",
+
+    "navigation.home": "Accueil",
+    "navigation.about": "À propos de nous",
+
+    "items.list.header": "Mes articles"
+}

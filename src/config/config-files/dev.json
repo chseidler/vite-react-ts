@@ -24,10 +24,10 @@
         "mockDelay": 250
       },
       "locales:": [
-        { "key": "en-US", "isDefault": true},
-        { "key": "it-IT", "isDefault": false},
-        { "key": "fr-FR", "isDefault": false},
-        { "key": "es-ES", "isDefault": false},
+        { "key": "en-US", "isDefault": true },
+        { "key": "it-IT", "isDefault": false },
+        { "key": "fr-FR", "isDefault": false },
+        { "key": "es-ES", "isDefault": false }
       ],
       "localStorageCache": {
         "enabled": true,
