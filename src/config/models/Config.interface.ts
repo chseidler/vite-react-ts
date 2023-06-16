@@ -12,4 +12,15 @@ export interface ConfigInterface {
     items: {
         apiClientOptions: ItemsApiClientOptions
     }
+    localization: {
+        apiClientOptions: LocalizationApiClientOptions,
+        locales: {
+            key: string,
+            isDefault: boolean
+        }[],
+        localStorageCache: {
+            enabled: boolean,
+            expirationInMinutes: number,
+        }
+    }
 }
