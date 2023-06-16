@@ -1,4 +1,5 @@
 import { ItemsApiClientOptions } from '../../api-client/models/items';
+import { LocalizationApiClientOptions } from '../../api-client/models/localization/LocalizationApiClientOptions.interface';
 import { HttpClientConfigInterface } from '../../http-client';
 
 export interface ConfigInterface {
