@@ -1,4 +1,5 @@
 import { ItemsApiClientInterface } from './items';
+import { LocalizationApiClientInterface } from './localization';
 
 /**
  * @name ApiClientInterface
@@ -6,4 +7,5 @@ import { ItemsApiClientInterface } from './items';
  */
 export interface ApiClientInterface {
     items: ItemsApiClientInterface;
+    localization: LocalizationApiClientInterface;
 }
