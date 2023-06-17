@@ -7,7 +7,7 @@ const localStorageConfig = config.localization.localStorageCache;
 
 export const userPreferredLocaleStorageKey = 'user-lcid';
 
-export const getUserPreferredLocale = () => {
+export const getUserPreferredLocale = (): string => {
   const availableLocales = config.localization.locales;
   const preferredLocale = localStorage.getItem(userPreferredLocaleStorageKey);
 
