@@ -68,7 +68,7 @@ const getLocaleData = async (namespace: string, lcid: string): Promise<NonNullab
 
 const backendModule: BackendModule = {
   type: 'backend',
-  init(services: Services, backendOptions: TOptions, i18nextOptions: InitOptions): void {},
+  init(services: Services, backendOptions: TOptions, i18nextOptions: InitOptions): void {/*TODO*/},
   read(language: string, namespace: string, callback: ReadCallback): void {
     console.log('backendModule read', language, namespace);
     const key = language;
