@@ -16,7 +16,7 @@ export const getDateTimeFormattersCacheKey = (params: { lcid: string, dateStyle?
   return cacheKey.trim().toLowerCase();
 };
 
-export const useDateTimeFormatters = (localeId: string) => {
+export const useDateTimeFormatter = (localeId: string) => {
   const _lcid = localeId;
   const _cache = new Map<string, Intl.DateTimeFormat>();
   const _cacheDayNames = new Map<string, { id: number, name: string}[]>();
