@@ -50,19 +50,18 @@ export const dateTimeFormatter = (localeId: string) => {
     },
 
     dayNames: (format: DayNameFormatType = 'long') => {
-      if (_cacheDayNames.has(format)) {
+      if (!_cacheDayNames.has(format)) {
         const items: { id: number; name: string }[] = [];
         for (let i = 0; i < 7; i++) {
           const strDay = (i + 1).toString().padStart(2, '0');
-          const date = new Date(`1970-03-${strDay}T00:00:00.000Z`);
-          const name = date.toLocaleString(_lcid, { weekday: format, timeZone: 'UTC' });
-
+          const date = new Date(`1970-03-${ strDay }T00:00:00.000Z`);
+          const name = date.toLocaleString(_lcid, { weekday: format, timeZone: 'UTC'});
           items.push({ id: i, name });
         }
         _cacheDayNames.set(format, items);
       }
 
-      return _cacheDayNames.get(format) as { id: number; name: string}[];
+      return _cacheDayNames.get(format) as { id: number; name: string }[];
     },
 
     monthNames: (format: MonthNameFormatType = 'long') => {

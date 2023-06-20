@@ -4,6 +4,7 @@ import './App.css';
 import { rootStore } from './store';
 import ItemsViews from './views/Items.view';
 import { useLocalization } from './localization';
+import { DebugFormatters } from './components/shared/DebugFormatters.component';
 
 function App() {
   const { t, locales, currentLocale, getUserPreferredLocale, changeLocale} = useLocalization();
@@ -49,6 +50,7 @@ function App() {
         </div>
         <h1>{ t('home.welcome') }</h1>
         <ItemsViews />
+        <DebugFormatters show />
       </div>
     </Provider>
   );
