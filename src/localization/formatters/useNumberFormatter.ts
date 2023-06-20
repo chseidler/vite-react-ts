@@ -27,7 +27,7 @@ export const getNumberFormatterCacheKey = (params: {
   return cacheKey;
 };
 
-export const useNumberFormatter = (localeId: string) => {
+export const numberFormatter = (localeId: string) => {
   const _lcid = localeId;
   const _cache = new Map<string, Intl.NumberFormat>();
 

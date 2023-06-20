@@ -1,9 +1,9 @@
-import { useDateTimeFormatter } from './useDateTimeFormatter';
-import { useNumberFormatter } from './useNumberFormatter';
+import { dateTimeFormatter } from './useDateTimeFormatter';
+import { numberFormatter } from './useNumberFormatter';
 
 export const useFormatter = () => {
   return {
-    useDateTimeFormatter,
-    useNumberFormatter
+    useDateTimeFormatter: dateTimeFormatter,
+    useNumberFormatter: numberFormatter
   };
 };
