@@ -1,5 +1,4 @@
 import { Provider } from 'react-redux';
-import './App.css';
 
 import { rootStore } from './store';
 import ItemsViews from './views/Items.view';
@@ -19,7 +18,7 @@ function App() {
 
   return (
     <Provider store={rootStore}>
-      <div className="App">
+      <div className="app m-2 p-2 border-2 border-red-500">
         <div className="locale-selector">
           {
             locales.map(item => {
