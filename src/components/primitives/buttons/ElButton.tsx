@@ -7,7 +7,7 @@ type ElButtonProps = {
   onClicked: Function,
 }
 
-export function SomeButton (props: ElButtonProps) {
+export function ElButton (props: ElButtonProps) {
   const { addCss, id, label, onClicked } = props;
   const testid = props.testid || 'testid-not-set';
   const disabled = props.disabled || false;
