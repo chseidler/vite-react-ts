@@ -1,9 +1,38 @@
+import { useState } from 'react';
 import { ElButton } from '../components/primitives/buttons/ElButton';
 import { ElText } from '../components/primitives/text/ElText';
+import { ElToggle } from '../components/primitives/toggles/ElToggle';
 
 function PrimitivesView() {
+  const [state, setState] = useState({
+    toggleItemState: [
+      {
+        id: 'toggle-a',
+        checked: true
+      },
+      {
+        id: 'toggle-b',
+        checked: true
+      },
+      {
+        id: 'toggle-c',
+        checked: true
+      },
+    ]
+  });
+
   const onButtonClicked = (args: any) => {
     console.log('onButtonClicked', args);
+  };
+
+  const onToggleClicked = (id: string) => {
+    console.log(`You clicked the "${id}" toggle`);
+    const stateItem = state.toggleItemState.find(item => item.id === id);
+
+    if (stateItem) {
+      stateItem.checked = !stateItem.checked;
+      setState({...state});
+    }
   };
 
   return (
@@ -37,6 +66,30 @@ function PrimitivesView() {
           label="This is a disabled button"
           addCss='ml-2'
           onClicked={onButtonClicked}
+        />
+      </div>
+
+      <ElText tag="h2" addCss="text-gray-500" text="ElToggle examples:" />
+      <div className="p-6 border">
+        <ElToggle
+          id="toggle-a"
+          checked={state.toggleItemState.find(item => item.id === 'toggle-a')?.checked}
+          disabled={false}
+          onClicked={onToggleClicked}
+        />
+        <ElToggle
+          id="toggle-b"
+          checked={state.toggleItemState.find(item => item.id === 'toggle-b')?.checked}
+          disabled={false}
+          addCss='ml-2'
+          onClicked={onToggleClicked}
+        />
+        <ElToggle
+          id="toggle-c"
+          checked={state.toggleItemState.find(item => item.id === 'toggle-c')?.checked}
+          disabled={false}
+          addCss='ml-2'
+          onClicked={onToggleClicked}
         />
       </div>
     </div>
