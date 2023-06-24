@@ -146,7 +146,7 @@ export class ElModal extends React.Component<ModalProps, ModalState> {
         React.createElement(ElButton, {
           key: 'btn-modal-confirm',
           id: 'btn-modal-confirm',
-          buttonType: this.state.primaryButtonType || 'primary',
+          buttonType: this.state.primaryButtonType,
           disabled: false,
           label: this.state.confirmLabel,
           addCss: 'ml-2',

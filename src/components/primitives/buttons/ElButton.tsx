@@ -1,17 +1,20 @@
+import { buttonCssStrategy } from './ButtonCssStrategy';
+
 type ElButtonProps = {
   testid?: string,
   id: string,
   label: string,
   disabled?: boolean,
   addCss?: string,
+  buttonType?: string
   onClicked: Function,
-  buttonType: string
 }
 
 export function ElButton (props: ElButtonProps) {
   const { addCss, id, label, onClicked } = props;
   const testid = props.testid || 'testid-not-set';
   const disabled = props.disabled || false;
+  const buttonType = props.buttonType || 'primary';
 
   const cssClass = (): string => {
     const result = [
@@ -35,12 +38,7 @@ export function ElButton (props: ElButtonProps) {
         'cursor-not-allowed'
       );
     } else {
-      result.push(
-        'bg-blue-500',
-        'text-whit',
-        'hover:bg-blue-400',
-        'focus:ring-blue-300'
-      );
+      result.push(buttonCssStrategy.get(buttonType) as string);
     }
 
     if (addCss) {
