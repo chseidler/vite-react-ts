@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { ElButton } from '../components/primitives/buttons/ElButton';
-import { ElText } from '../components/primitives/text/ElText';
-import { ElToggle } from '../components/primitives/toggles/ElToggle';
+
+import { ElButton, ElText, ElToggle } from '../components/primitives';
 
 function PrimitivesView() {
   const [state, setState] = useState({
