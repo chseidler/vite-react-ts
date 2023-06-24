@@ -5,6 +5,7 @@ type ElButtonProps = {
   disabled?: boolean,
   addCss?: string,
   onClicked: Function,
+  buttonType: string
 }
 
 export function ElButton (props: ElButtonProps) {
